@@ -6,7 +6,7 @@ Fokus: demografi pengguna, jam sibuk, koridor terpopuler, metode pembayaran, dan
 ## 🔗 Live Dashboard
 👉 **Tableau Public**: https://public.tableau.com/app/profile/muhammad.farhan4460/viz/Dashboard_17605140938790/Dashboard1?publish=yes
 
-![Dashboard Transjakarta](exports/dashboard_transjakarta.png)
+
 
 ---
 
