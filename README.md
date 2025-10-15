@@ -12,7 +12,7 @@ Fokus: demografi pengguna, jam sibuk, koridor terpopuler, metode pembayaran, dan
 
 ## 🎯 Tujuan
 - Mengidentifikasi karakteristik pengguna (gender & umur).
-- Menemukan **jam sibuk** (pagi/sore) dan perbedaan weekday vs weekend.
+- Menemukan **jam sibuk** (pagi/sore)
 - Melihat **koridor & halte terpopuler**.
 - Menganalisis **metode pembayaran** dan rata-rata tarif.
 - Mengestimasi **total pendapatan** periode analisis.
