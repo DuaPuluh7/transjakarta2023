@@ -1,0 +1,2732 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0912.2314                               -->
+<workbook original-version='18.1' source-build='2025.2.3 (20252.25.0912.2314)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Pilihan Tampilan Tarif' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Rata-rata Tarif&quot;'>
+        <calculation class='tableau' formula='&quot;Rata-rata Tarif&quot;' />
+        <members>
+          <member value='&quot;Total Tarif&quot;' />
+          <member value='&quot;Rata-rata Tarif&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='transjakarta' inline='true' name='federated.0ncreoz02wrwiq11my7p50e42m8a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='transjakarta' name='textscan.1gmaia91tpyziy1h2y9fl1e6s8j8'>
+            <connection class='textscan' directory='D:/DATA FARHAN/Portofolio/Transjakarta - Dashboard/Data' filename='transjakarta.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1gmaia91tpyziy1h2y9fl1e6s8j8' name='transjakarta.csv' table='[transjakarta#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID'>
+            <column datatype='string' name='transID' ordinal='0' />
+            <column datatype='integer' name='payCardID' ordinal='1' />
+            <column datatype='string' name='payCardBank' ordinal='2' />
+            <column datatype='string' name='payCardName' ordinal='3' />
+            <column datatype='string' name='payCardSex' ordinal='4' />
+            <column datatype='integer' name='payCardBirthDate' ordinal='5' />
+            <column datatype='string' name='corridorID' ordinal='6' />
+            <column datatype='string' name='corridorName' ordinal='7' />
+            <column datatype='string' name='direction' ordinal='8' />
+            <column datatype='string' name='tapInStops' ordinal='9' />
+            <column datatype='string' name='boarding_stop' ordinal='10' />
+            <column datatype='string' name='tapInStopsLat' ordinal='11' />
+            <column datatype='string' name='tapInStopsLon' ordinal='12' />
+            <column datatype='integer' name='stopStartSeq' ordinal='13' />
+            <column datatype='datetime' name='boarding_time' ordinal='14' />
+            <column datatype='string' name='tapOutStops' ordinal='15' />
+            <column datatype='string' name='destination_stop' ordinal='16' />
+            <column datatype='string' name='tapOutStopsLat' ordinal='17' />
+            <column datatype='string' name='tapOutStopsLon' ordinal='18' />
+            <column datatype='string' name='stopEndSeq' ordinal='19' />
+            <column datatype='datetime' name='alighting_time' ordinal='20' />
+            <column datatype='integer' name='fare' ordinal='21' />
+            <column datatype='integer' name='hour' ordinal='22' />
+            <column datatype='string' name='dow' ordinal='23' />
+            <column datatype='boolean' name='is_weekend' ordinal='24' />
+            <column datatype='integer' name='age' ordinal='25' />
+            <column datatype='string' name='day' ordinal='26' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[transID]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>transID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payCardID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payCardID]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>payCardID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payCardBank</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payCardBank]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>payCardBank</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payCardName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payCardName]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>payCardName</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payCardSex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payCardSex]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>payCardSex</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payCardBirthDate</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payCardBirthDate]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>payCardBirthDate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>corridorID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[corridorID]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>corridorID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>corridorName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[corridorName]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>corridorName</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>direction</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[direction]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>direction</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapInStops</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapInStops]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapInStops</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>boarding_stop</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[boarding_stop]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>boarding_stop</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapInStopsLat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapInStopsLat]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapInStopsLat</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapInStopsLon</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapInStopsLon]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapInStopsLon</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopStartSeq</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[stopStartSeq]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>stopStartSeq</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>boarding_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[boarding_time]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>boarding_time</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapOutStops</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapOutStops]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapOutStops</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>destination_stop</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[destination_stop]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>destination_stop</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapOutStopsLat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapOutStopsLat]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapOutStopsLat</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tapOutStopsLon</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tapOutStopsLon]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>tapOutStopsLon</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopEndSeq</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stopEndSeq]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>stopEndSeq</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>alighting_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[alighting_time]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>alighting_time</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fare</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fare]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>fare</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dow</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dow]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>dow</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_weekend</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_weekend]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>is_weekend</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[transjakarta.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+      </column>
+      <column caption='Kalkulasi Tarif Dinamis' datatype='real' name='[Calculation_1445655544525402113]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Total Tarif&quot; THEN SUM([fare])&#13;&#10;WHEN &quot;Rata-rata Tarif&quot; THEN AVG([fare])&#13;&#10;END' />
+      </column>
+      <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Peringkat Corridor' datatype='integer' name='[Calculation_1445655544534622211]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(COUNTD([transID]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Highlight Top Payment' datatype='boolean' name='[Calculation_1445655544582565892]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='RANK_UNIQUE(COUNTD([transID])) = 1'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Highlight Top 3 Halte' datatype='string' name='[Calculation_1445655544586440709]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF RANK_UNIQUE(COUNTD([transID])) &lt;= 3 THEN STR(RANK_UNIQUE(COUNTD([transID])))&#13;&#10;ELSE &quot;Lainnya&quot;&#13;&#10;END'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='transjakarta.csv' datatype='table' name='[__tableau_internal_object_id__].[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Alighting Time' datatype='datetime' name='[alighting_time]' role='dimension' type='ordinal' />
+      <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+      <column caption='Boarding Time' datatype='datetime' name='[boarding_time]' role='dimension' type='ordinal' />
+      <column aggregation='CountD' caption='Corridor ID' datatype='string' name='[corridorID]' role='dimension' type='nominal' />
+      <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+      <column caption='Day' datatype='string' name='[day]' role='dimension' type='nominal' />
+      <column caption='Destination Stop' datatype='string' name='[destination_stop]' role='dimension' type='nominal' />
+      <column caption='Direction' datatype='string' name='[direction]' role='dimension' type='nominal' />
+      <column caption='Dow' datatype='string' name='[dow]' role='dimension' type='nominal' />
+      <column caption='Fare' datatype='integer' name='[fare]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Hour' datatype='integer' name='[hour]' role='dimension' type='ordinal' />
+      <column caption='Is Weekend' datatype='boolean' name='[is_weekend]' role='dimension' type='nominal' />
+      <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+      <column caption='Pay Card Birth Date' datatype='integer' name='[payCardBirthDate]' role='measure' type='quantitative' />
+      <column caption='Pay Card ID' datatype='integer' name='[payCardID]' role='dimension' type='ordinal' />
+      <column caption='Pay Card Name' datatype='string' name='[payCardName]' role='dimension' type='nominal' />
+      <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;F&quot;' value='Perempuan' />
+          <alias key='&quot;M&quot;' value='Laki-Laki' />
+        </aliases>
+      </column>
+      <column caption='Stop End Seq' datatype='string' name='[stopEndSeq]' role='dimension' type='nominal' />
+      <column caption='Stop Start Seq' datatype='integer' name='[stopStartSeq]' role='measure' type='quantitative' />
+      <column caption='Tap In Stops Lat' datatype='string' name='[tapInStopsLat]' role='dimension' type='nominal' />
+      <column caption='Tap In Stops Lon' datatype='string' name='[tapInStopsLon]' role='dimension' type='nominal' />
+      <column caption='Tap In Stops' datatype='string' name='[tapInStops]' role='dimension' type='nominal' />
+      <column caption='Tap Out Stops Lat' datatype='string' name='[tapOutStopsLat]' role='dimension' type='nominal' />
+      <column caption='Tap Out Stops Lon' datatype='string' name='[tapOutStopsLon]' role='dimension' type='nominal' />
+      <column caption='Tap Out Stops' datatype='string' name='[tapOutStops]' role='dimension' type='nominal' />
+      <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_1445655544532148226]' derivation='None' name='[none:Calculation_1445655544532148226:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1445655544582565892]' derivation='User' name='[usr:Calculation_1445655544582565892:nk]' pivot='key' type='nominal'>
+        <table-calc ordering-type='Columns' />
+      </column-instance>
+      <group caption='Action (Age (bin))' hidden='true' name='[Action (Age (bin))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Age (bin)]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Boarding Stop)' hidden='true' name='[Action (Boarding Stop)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[boarding_stop]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Highlight Unknown,Corridor Name)' hidden='true' name='[Action (Highlight Unknown,Corridor Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+          <groupfilter function='level-members' level='[corridorName]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Hour)' hidden='true' name='[Action (Hour)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[hour]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Pay Card Bank)' hidden='true' name='[Action (Pay Card Bank)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[payCardBank]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Pay Card Sex)' hidden='true' name='[Action (Pay Card Sex)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[payCardSex]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='D:/DATA FARHAN/Portofolio/Transjakarta - Dashboard/transjakarta.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/15/2025 07:39:54 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='transjakarta' increment-value='%null%' refresh-type='create' rows-inserted='179195' timestamp-start='2025-10-15 07:39:52.321' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>transID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[transID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>transID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>179195</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payCardID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[payCardID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payCardID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25108</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payCardBank</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payCardBank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payCardBank</remote-alias>
+              <ordinal>2</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payCardName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payCardName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payCardName</remote-alias>
+              <ordinal>3</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25108</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payCardSex</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payCardSex]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payCardSex</remote-alias>
+              <ordinal>4</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payCardBirthDate</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[payCardBirthDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payCardBirthDate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>113</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>corridorID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[corridorID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>corridorID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>377</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>corridorName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[corridorName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>corridorName</remote-alias>
+              <ordinal>7</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>383</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>direction</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[direction]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>direction</remote-alias>
+              <ordinal>8</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapInStops</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapInStops]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapInStops</remote-alias>
+              <ordinal>9</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11441</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>boarding_stop</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[boarding_stop]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>boarding_stop</remote-alias>
+              <ordinal>10</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11778</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapInStopsLat</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapInStopsLat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapInStopsLat</remote-alias>
+              <ordinal>11</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11755</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapInStopsLon</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapInStopsLon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapInStopsLon</remote-alias>
+              <ordinal>12</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10892</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stopStartSeq</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[stopStartSeq]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stopStartSeq</remote-alias>
+              <ordinal>13</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>boarding_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[boarding_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>boarding_time</remote-alias>
+              <ordinal>14</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>179195</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapOutStops</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapOutStops]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapOutStops</remote-alias>
+              <ordinal>15</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9835</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>destination_stop</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[destination_stop]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>destination_stop</remote-alias>
+              <ordinal>16</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9601</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapOutStopsLat</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapOutStopsLat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapOutStopsLat</remote-alias>
+              <ordinal>17</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9528</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tapOutStopsLon</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tapOutStopsLon]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tapOutStopsLon</remote-alias>
+              <ordinal>18</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8581</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>stopEndSeq</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[stopEndSeq]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>stopEndSeq</remote-alias>
+              <ordinal>19</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>195</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>alighting_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[alighting_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>alighting_time</remote-alias>
+              <ordinal>20</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>179195</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fare</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[fare]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fare</remote-alias>
+              <ordinal>21</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>22</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dow</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dow]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dow</remote-alias>
+              <ordinal>23</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_weekend</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_weekend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_weekend</remote-alias>
+              <ordinal>24</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>25</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>113</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[day]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day</remote-alias>
+              <ordinal>26</ordinal>
+              <family>transjakarta.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_1445655544582565892:nk]' type='palette'>
+            <map to='#4db6ac'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1445655544532148226:nk]' type='palette'>
+            <map to='#4db6ac'>
+              <bucket>&quot;Koridor Lainnya&quot;</bucket>
+            </map>
+            <map to='#ff8a65'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Pilihan Tampilan Tarif' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Rata-rata Tarif&quot;'>
+          <calculation class='tableau' formula='&quot;Rata-rata Tarif&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='transjakarta.csv' id='transjakarta.csv_0E96F2C084374E55A6C6BEC24E9A36AC'>
+            <properties context=''>
+              <relation connection='textscan.1gmaia91tpyziy1h2y9fl1e6s8j8' name='transjakarta.csv' table='[transjakarta#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID'>
+                  <column datatype='string' name='transID' ordinal='0' />
+                  <column datatype='integer' name='payCardID' ordinal='1' />
+                  <column datatype='string' name='payCardBank' ordinal='2' />
+                  <column datatype='string' name='payCardName' ordinal='3' />
+                  <column datatype='string' name='payCardSex' ordinal='4' />
+                  <column datatype='integer' name='payCardBirthDate' ordinal='5' />
+                  <column datatype='string' name='corridorID' ordinal='6' />
+                  <column datatype='string' name='corridorName' ordinal='7' />
+                  <column datatype='string' name='direction' ordinal='8' />
+                  <column datatype='string' name='tapInStops' ordinal='9' />
+                  <column datatype='string' name='boarding_stop' ordinal='10' />
+                  <column datatype='string' name='tapInStopsLat' ordinal='11' />
+                  <column datatype='string' name='tapInStopsLon' ordinal='12' />
+                  <column datatype='integer' name='stopStartSeq' ordinal='13' />
+                  <column datatype='datetime' name='boarding_time' ordinal='14' />
+                  <column datatype='string' name='tapOutStops' ordinal='15' />
+                  <column datatype='string' name='destination_stop' ordinal='16' />
+                  <column datatype='string' name='tapOutStopsLat' ordinal='17' />
+                  <column datatype='string' name='tapOutStopsLon' ordinal='18' />
+                  <column datatype='string' name='stopEndSeq' ordinal='19' />
+                  <column datatype='datetime' name='alighting_time' ordinal='20' />
+                  <column datatype='integer' name='fare' ordinal='21' />
+                  <column datatype='integer' name='hour' ordinal='22' />
+                  <column datatype='string' name='dow' ordinal='23' />
+                  <column datatype='boolean' name='is_weekend' ordinal='24' />
+                  <column datatype='integer' name='age' ordinal='25' />
+                  <column datatype='string' name='day' ordinal='26' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_4DCADDFE386C4A81A9968A89168CC137]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Distribusi Umur' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_EB20E83F9A194186BFC77BDB647A44DB]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Distribusi Gender' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_2E5E489AC5344C69A79058E1A0425DE5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Top Koridor' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action4_FEFFE55AC55647FA9A0F296825974DB8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Payment' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Distribusi Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Distribusi Pengguna Berdasarkan Jenis Kelamin</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payCardSex]' derivation='None' name='[none:payCardSex:nk]' pivot='key' type='nominal' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column-instance column='[transID]' derivation='CountD' name='[pcto:ctd:transID:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <wedge-size column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+              <color column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[pcto:ctd:transID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Benton Sans Book'><![CDATA[<[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]> ]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Benton Sans Book'><![CDATA[<[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontname='Benton Sans Book'><![CDATA[(<[federated.0ncreoz02wrwiq11my7p50e42m8a].[pcto:ctd:transID:qk]>)]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{814C8AA2-ADFA-439F-B5E4-8D2597AC7557}' />
+    </worksheet>
+    <worksheet name='Distribusi Umur'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Distribusi Pengguna Berdasarkan Kelompok Umur</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' scope='rows' value='Jumlah Penumpang' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4db6ac' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</rows>
+        <cols>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{05A054CB-E43B-4E4C-9B53-D72B96F34E7D}' />
+    </worksheet>
+    <worksheet name='Jumlah Koridor'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontname='Tableau Book'>Jumlah Koridor Aktif</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor ID' datatype='string' name='[corridorID]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[corridorID]' derivation='CountD' name='[ctd:corridorID:qk]' pivot='key' type='quantitative' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:corridorID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:corridorID:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B9E6608A-3AD2-45A0-A333-C69D4B42BCBC}' />
+    </worksheet>
+    <worksheet name='Jumlah Pengguna'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Book'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[payCardID]' derivation='CountD' name='[ctd:payCardID:qk]' pivot='key' type='quantitative' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card ID' datatype='integer' name='[payCardID]' role='dimension' type='ordinal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:payCardID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:payCardID:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7CB876C0-F377-45BD-B8C3-3C1625AA9BAE}' />
+    </worksheet>
+    <worksheet name='Payment'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Distribusi Penggunaan Kartu Pembayaran</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Highlight Top Payment' datatype='boolean' name='[Calculation_1445655544582565892]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='RANK_UNIQUE(COUNTD([transID])) = 1'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payCardBank]' derivation='None' name='[none:payCardBank:nk]' pivot='key' type='nominal' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='Sum' name='[sum:age:qk]' pivot='key' type='quantitative' />
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1445655544582565892]' derivation='User' name='[usr:Calculation_1445655544582565892:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]'>
+            <groupfilter function='level-members' level='[none:payCardBank:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]' direction='DESC' using='[federated.0ncreoz02wrwiq11my7p50e42m8a].[sum:age:qk]' />
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' scope='cols' value='Jumlah Pengguna' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544582565892:nk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]</rows>
+        <cols>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</cols>
+      </table>
+      <simple-id uuid='{BF39F6CE-18C4-4530-91CC-F6B35B321584}' />
+    </worksheet>
+    <worksheet name='Peak Hour'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Jam Sibuk Perjalanan</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Hour' datatype='integer' name='[hour]' role='dimension' type='ordinal' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' scope='rows' value='Jumlah Perjalanan' />
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:hour:qk]' scope='cols' value='Jam' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#4db6ac' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</rows>
+        <cols>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:hour:qk]</cols>
+      </table>
+      <simple-id uuid='{E43388C6-4E3F-4906-BA63-C73F4C41FD96}' />
+    </worksheet>
+    <worksheet name='Tarif Dinamis'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Pilihan Tampilan Tarif' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Rata-rata Tarif&quot;'>
+              <calculation class='tableau' formula='&quot;Rata-rata Tarif&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Kalkulasi Tarif Dinamis' datatype='real' name='[Calculation_1445655544525402113]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#13;&#10;WHEN &quot;Total Tarif&quot; THEN SUM([fare])&#13;&#10;WHEN &quot;Rata-rata Tarif&quot; THEN AVG([fare])&#13;&#10;END' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column caption='Fare' datatype='integer' name='[fare]' role='measure' type='quantitative' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column-instance column='[Calculation_1445655544525402113]' derivation='User' name='[usr:Calculation_1445655544525402113:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544525402113:qk]' value='C1057%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[Parameters].[Parameter 1]' value='21' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[Parameters].[Parameter 1]' value='Tableau Book' />
+            <format attr='font-size' field='[Parameters].[Parameter 1]' value='15' />
+            <format attr='text-align' field='[Parameters].[Parameter 1]' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544525402113:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544525402113:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[Parameters].[Parameter 1]</cols>
+      </table>
+      <simple-id uuid='{9BEB187F-97AB-42E8-9479-5E1A96636C87}' />
+    </worksheet>
+    <worksheet name='Top Halte'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Highlight Top 3 Halte' datatype='string' name='[Calculation_1445655544586440709]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF RANK_UNIQUE(COUNTD([transID])) &lt;= 3 THEN STR(RANK_UNIQUE(COUNTD([transID])))&#13;&#10;ELSE &quot;Lainnya&quot;&#13;&#10;END'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[boarding_stop]' derivation='None' name='[none:boarding_stop:nk]' pivot='key' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1445655544586440709]' derivation='User' name='[usr:Calculation_1445655544586440709:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:boarding_stop:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([transID])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:boarding_stop:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:boarding_stop:nk]' direction='DESC' using='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:boarding_stop:nk]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' scope='cols' value='Jumlah Keberangkatan' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544586440709:nk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:boarding_stop:nk]</rows>
+        <cols>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</cols>
+      </table>
+      <simple-id uuid='{D262A883-1F28-45E4-B611-9BD0AA456629}' />
+    </worksheet>
+    <worksheet name='Top Koridor'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontsize='14'>Koridor dengan Jumlah Perjalanan Tertinggi</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Peringkat Corridor' datatype='integer' name='[Calculation_1445655544534622211]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE(COUNTD([transID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1445655544532148226]' derivation='None' name='[none:Calculation_1445655544532148226:nk]' pivot='key' type='nominal' />
+            <column-instance column='[corridorName]' derivation='None' name='[none:corridorName:nk]' pivot='key' type='nominal' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1445655544534622211]' derivation='User' name='[usr:Calculation_1445655544534622211:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544534622211:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>10</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:corridorName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544534622211:qk]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' scope='cols' value='Jumlah Perjalanan' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:Calculation_1445655544532148226:nk]' />
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#aa0000' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:corridorName:nk]</rows>
+        <cols>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</cols>
+      </table>
+      <simple-id uuid='{AAE10A2E-2599-499D-98EC-B1643B3B5854}' />
+    </worksheet>
+    <worksheet name='Total Perjalanan'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Highlight Unknown' datatype='string' name='[Calculation_1445655544532148226]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [corridorName] = &quot;Unknown Corridor&quot; THEN &quot;Unknown&quot;&#13;&#10;ELSE &quot;Koridor Lainnya&quot;&#13;&#10;END' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Boarding Stop' datatype='string' name='[boarding_stop]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Corridor Name' datatype='string' name='[corridorName]' role='dimension' type='nominal' />
+            <column-instance column='[transID]' derivation='CountD' name='[ctd:transID:qk]' pivot='key' type='quantitative' />
+            <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+            <column caption='Pay Card Sex' datatype='string' name='[payCardSex]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;F&quot;' value='Perempuan' />
+                <alias key='&quot;M&quot;' value='Laki-Laki' />
+              </aliases>
+            </column>
+            <column aggregation='CountD' caption='Trans ID' datatype='string' default-role='measure' default-type='quantitative' name='[transID]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]'>
+            <groupfilter function='level-members' level='[Age (bin)]' user:ui-action-filter='[Action1_4DCADDFE386C4A81A9968A89168CC137]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]'>
+            <groupfilter function='level-members' level='[boarding_stop]' user:ui-action-filter='[Action5_A1B9FC03F6E04AF9BB1835C6E10604E5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_2E5E489AC5344C69A79058E1A0425DE5]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1445655544532148226]' />
+              <groupfilter function='level-members' level='[corridorName]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]'>
+            <groupfilter function='level-members' level='[payCardBank]' user:ui-action-filter='[Action4_FEFFE55AC55647FA9A0F296825974DB8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]'>
+            <groupfilter function='level-members' level='[payCardSex]' user:ui-action-filter='[Action2_EB20E83F9A194186BFC77BDB647A44DB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Sex)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Highlight Unknown,Corridor Name)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Boarding Stop)]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Age (bin))]</column>
+            <column>[federated.0ncreoz02wrwiq11my7p50e42m8a].[Action (Pay Card Bank)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.0ncreoz02wrwiq11my7p50e42m8a].[ctd:transID:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{29429C47-D31B-4703-83C1-1B32764CEC8A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Analisis Perjalanan dan Pola Pengguna Transjakarta 2023</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='font-family' value='Segoe UI' />
+          <format attr='text-align' value='center' />
+          <format attr='background-color' value='#e7f1f5' />
+        </style-rule>
+      </style>
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='transjakarta' name='federated.0ncreoz02wrwiq11my7p50e42m8a' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Pilihan Tampilan Tarif' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Rata-rata Tarif&quot;'>
+          <calculation class='tableau' formula='&quot;Rata-rata Tarif&quot;' />
+          <members>
+            <member value='&quot;Total Tarif&quot;' />
+            <member value='&quot;Rata-rata Tarif&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.0ncreoz02wrwiq11my7p50e42m8a'>
+        <column-instance column='[payCardBank]' derivation='None' name='[none:payCardBank:nk]' pivot='key' type='nominal' />
+        <column caption='Pay Card Bank' datatype='string' name='[payCardBank]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='17667' id='5' param='vert' type-v2='layout-flow' w='92063' x='500' y='889'>
+            <zone h='4333' id='7' type-v2='title' w='92063' x='500' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='13334' id='6' type-v2='layout-basic' w='92063' x='500' y='5222'>
+              <zone h='13334' id='8' param='horz' type-v2='layout-flow' w='92063' x='500' y='5222'>
+                <zone h='13334' id='11' name='Total Perjalanan' w='23015' x='500' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13334' id='12' name='Jumlah Koridor' w='23015' x='23515' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13334' id='13' name='Jumlah Pengguna' w='23015' x='46530' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13334' id='14' name='Tarif Dinamis' show-title='false' w='23015' x='69545' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='98222' id='9' param='vert' type-v2='layout-flow' w='6937' x='92563' y='889'>
+            <zone h='5778' id='15' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='6937' x='92563' y='889'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='7333' id='17' name='Distribusi Gender' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]' type-v2='color' w='6937' x='92563' y='6667'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='7333' id='21' name='Top Koridor' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:Calculation_1445655544532148226:nk]' type-v2='color' w='6937' x='92563' y='14000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='5778' id='23' mode='checkdropdown' name='Payment' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]' type-v2='filter' w='6937' x='92563' y='21333'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='7333' id='24' name='Payment' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544582565892:nk]' type-v2='color' w='6937' x='92563' y='27111'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='36333' id='16' name='Distribusi Gender' w='32813' x='500' y='18556'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='36333' id='18' name='Distribusi Umur' w='59250' x='33313' y='18556'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='40667' id='19' name='Peak Hour' w='29250' x='500' y='58444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='40667' id='20' name='Top Koridor' w='26375' x='31750' y='58444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='40667' id='22' name='Payment' w='32438' x='60125' y='58444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3555' id='25' type-v2='empty' w='92063' x='500' y='54889'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='40667' id='26' type-v2='empty' w='2000' x='29750' y='58444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='40667' id='27' type-v2='empty' w='2000' x='58125' y='58444'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>Analisis Perjalanan dan Pola Pengguna Transjakarta 2023</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2350' minheight='2350' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='30' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone h='4333' id='7' type-v2='title' w='92063' x='500' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5778' id='15' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='6937' x='92563' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='112' h='13334' id='11' is-fixed='true' name='Total Perjalanan' w='23015' x='500' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='112' h='13334' id='12' is-fixed='true' name='Jumlah Koridor' w='23015' x='23515' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='112' h='13334' id='13' is-fixed='true' name='Jumlah Pengguna' w='23015' x='46530' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='112' h='13334' id='14' is-fixed='true' name='Tarif Dinamis' show-title='false' w='23015' x='69545' y='5222'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36333' id='16' is-fixed='true' name='Distribusi Gender' w='32813' x='500' y='18556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7333' id='17' name='Distribusi Gender' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]' type-v2='color' w='6937' x='92563' y='6667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36333' id='18' is-fixed='true' name='Distribusi Umur' w='59250' x='33313' y='18556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40667' id='19' is-fixed='true' name='Peak Hour' w='29250' x='500' y='58444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40667' id='20' is-fixed='true' name='Top Koridor' w='26375' x='31750' y='58444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7333' id='21' name='Top Koridor' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:Calculation_1445655544532148226:nk]' type-v2='color' w='6937' x='92563' y='14000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5778' id='23' mode='checkdropdown' name='Payment' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]' type-v2='filter' w='6937' x='92563' y='21333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40667' id='22' is-fixed='true' name='Payment' w='32438' x='60125' y='58444'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7333' id='24' name='Payment' pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544582565892:nk]' type-v2='color' w='6937' x='92563' y='27111'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{691956A3-145C-4739-A8D6-336C61968921}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Perjalanan'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A640D53B-2D77-4CF6-96E4-EC206F61F484}' />
+    </window>
+    <window class='worksheet' name='Jumlah Koridor'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{86A5E204-2951-4B78-9438-7D650D19B4F1}' />
+    </window>
+    <window class='worksheet' name='Jumlah Pengguna'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3A942411-4CDD-420B-93E0-5B6A8E3699C9}' />
+    </window>
+    <window class='worksheet' name='Tarif Dinamis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{BC06CEF7-B706-4E2B-AECB-2FF888B21861}' />
+    </window>
+    <window class='worksheet' name='Peak Hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2BAEAF92-EB96-4662-A88D-EDD3F0731E4B}' />
+    </window>
+    <window class='worksheet' name='Top Koridor'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:Calculation_1445655544532148226:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{43609A39-0C31-4650-98B4-25A12C50A465}' />
+    </window>
+    <window class='worksheet' name='Distribusi Umur'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{518BFBC6-FB1E-44AD-8E35-1F32AD07B560}' />
+    </window>
+    <window class='worksheet' name='Distribusi Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardSex:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{65A22096-FAE5-4F03-AC5A-41D79F5A6F47}' />
+    </window>
+    <window class='worksheet' name='Payment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[none:payCardBank:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544582565892:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2414CDE9-83B5-449C-AD40-47E24C59F439}' />
+    </window>
+    <window class='worksheet' name='Top Halte'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ncreoz02wrwiq11my7p50e42m8a].[usr:Calculation_1445655544586440709:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{962149FE-BDD9-4818-8327-EB15FB99718D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Distribusi Gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribusi Umur'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Jumlah Koridor'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Jumlah Pengguna'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Payment'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Peak Hour'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tarif Dinamis'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Koridor'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Perjalanan'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='20' />
+      <simple-id uuid='{8837D28A-3A27-41B9-AD48-0673C66E00AD}' />
+    </window>
+  </windows>
+</workbook>
